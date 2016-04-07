@@ -1,8 +1,9 @@
 package main
 
 import (
-	"encoding/json"
 	"os/exec"
+
+	"gopkg.in/yaml.v2"
 )
 
 func run(cmd string, args []string) ([]byte, error) {
@@ -10,14 +11,14 @@ func run(cmd string, args []string) ([]byte, error) {
 }
 
 func salt(out interface{}, args ...string) (err error) {
-	args = append([]string{"--out", "json"}, args...)
+	args = append([]string{"--out", "yaml"}, args...)
 
 	data, err := run("salt", args)
 	if err != nil {
 		return err
 	}
 
-	err = json.Unmarshal(data, out)
+	err = yaml.Unmarshal(data, out)
 	if err != nil {
 		return err
 	}
