@@ -1,6 +1,8 @@
-# :truck: Salt Truck
+# Salt Truck :truck: [![Build Status](https://travis-ci.org/Benzinga/salt-truck.svg?branch=master)](https://travis-ci.org/Benzinga/salt-truck)
 
 Salt Truck is a set of utilities for Salt-based server fleets, particularly for Salt master servers.
+
+You can download it as a single, self-contained binary for your platform [here](https://github.com/Benzinga/salt-truck/releases).
 
 ## Commands
 
