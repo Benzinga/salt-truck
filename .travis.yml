@@ -1,0 +1,14 @@
+script:
+  - make cross
+deploy:
+  provider: releases
+  api_key:
+    secure: i3NsFizDs7qOOh1bHUgeUhtOhG7h8xHV2+hwmnUvIexgIrVw4lVir83o3Y7CTdzTm+sM8WhpFyBvUW4O1s7UGOAb9vKGI4Jk99MOBBaec7Uvirh8wwr97YYqN9sQzbQppfRpwcagYQ0U756IPAQ2WlvPDF316B15RACLiUZPv7KXX02z4iMy1qAoxFEdRBmZW2szATd000SV5AdmoBokmMio4xmW4osuQz3oOToWwlLvbQfkRuiNjhmFMOUPg8tfUXg5q6zzMktXU15xHPQVRy3RYw8o3z2gUC5h8zZsEgd9A5TFCY3WXysW8uqmE9LVrKwc/EQfFn5yzoYXqDxwbxlEp2OrDqqavUJFG/Sr+/QL7WqzM8WoQuQ1wPgIDSEUYHynfHkYDU4rwF16yeT1oSbyMsJEbh1InmIBhUNJInsSiktD40/chBvL93PPXXFI6rSsK9FOXA3Rt292mpIVx+yM7jxoMOYErq60jyh16HJ1lHZRmw1wHNpB0Q+ieA4jurbDkfvHKmShD++ChBEF+x2GdQtdnkPuhQk+aR4dXoqVUeNHbWDE9VhYFJhaVKu15wFkMlg9fL2kX66J1m7RnJH394oGt6comEDboiamM1fG9GVfwWQd/nrpZAem1dbh2m1263N8bY0FGuX6pC0YKct1eaYhEV92SeI8jcNb0HE=
+  file:
+    - darwin.tgz
+    - linux-386.tgz
+    - linux-amd64.tgz
+    - freebsd-386.tgz
+    - freebsd-amd64.tgz
+  on:
+    repo: Benzinga/salt-truck
